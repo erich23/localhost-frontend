@@ -1,0 +1,51 @@
+7/2/18
+
+API: Application Programming Interface
+
+a basic example: function() does what we request for
+
+REST: Representational State Transfer
+- architectural style for designing and developing web services (API's)
+- can build on any protocol (set of rules that defines how computer should behave)
+    - HTTP: Hypertext Transfer Protocol, enables remote systems to talk to each
+      other
+- web service should be stateless: server does not keep track of a user session
+  between requests
+    - request 1 and 2 should be independent in the eyes of the server.
+
+HTTP GET: request data, does not allow a body of data (returns JSON data format 
+          of what is requested)
+
+    ?: from repo to parameter
+    Parameters separated by &'s
+
+    " GET    <BURL> /payments?date_from=20010101&date_to=20010107 "
+    |method|Base-URL|--repo--|-----------parameters-------------|
+    
+Security? --> Authentication Token
+    auth_token=ABC123
+
+HTTP POST: usually to create (post) data to the server
+    example: a login function
+    " POST /auth " (endpoint)
+    JSON:
+    {
+        email: miki
+        pword: 1234
+    }
+
+HTTP status codes: response from server
+    1xx: Information
+    2xx: Success
+    3xx: Redirection
+    4xx: Client Error (ex. 404 ERROR)
+    5xx: Server Error
+
+~?/*********************************************************************/?~
+
+LoopBack NEXT
+
+Controller: class that implements operations defined by application's API.
+Repositories: 
+
+

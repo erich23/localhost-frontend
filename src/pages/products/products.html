@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar hideBackButton style="height: 44px">
+    <ion-title>
+
+      Explore
+    </ion-title>
+    <button ion-button clear icon-only style="float: right;" (click)="navigateToAddProduct()">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #f8e9ce">
+
+
+
+  <ion-list>
+    <div text-center>
+      <img width=400px height=150px src="../../assets/imgs/proofofconcept.jpg">
+    </div>
+    <ion-list-header>
+      Near You
+    </ion-list-header>
+    <ion-item *ngFor="let product of products" (click)="navigateToProduct(product)">
+      <!-- <ion-thumbnail item-start>
+              <img src="{{product.imageThumbnail}}">
+          </ion-thumbnail>  -->
+      <ion-thumbnail item-start>
+        <img src={{product?.photo_url}} alt="Product Image">
+      </ion-thumbnail>
+      <h2>{{product.name}}</h2>
+      <p>{{product.description}}</p>
+      <button ion-button clear item-end color="accent1">View</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<!--
+  Generated template for the LocationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Locations</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content style="background-color: #f8e9ce">
+
+  <div text-center>
+    <img width=50px height=50px src="../../assets/imgs/localhostlogo.png">
+  </div>
+
+  <div class="card-background-page">
+
+
+
+    <ion-card type="button" *ngFor="let location of locations" (click)="navigateToLocation(location)">
+      <img class="img" height="100%" src={{location.image}} />
+      <div class="card-title">{{location.name}}</div>
+      <div class="card-subtitle">{{location.listings}} Listings</div>
+    </ion-card>
+
+
+  </div>
+</ion-content>

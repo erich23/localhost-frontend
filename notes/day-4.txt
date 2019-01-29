@@ -1,0 +1,26 @@
+6/28/18
+
+1) Data Modeling
+
+Product:
+    Name (string of characters)
+    Price (numerical amount)
+    Description (string of characters)
+
+2) UML Diagram (Unified Modeling Language)
+
+A way of visualizing a software program using a collection of diagrams.
+
+/***********/
+
+Styling
+
+1) Start off with an existing Ionic component to see if it solves the requirement.
+
+https://ionicframework.com/docs/components/
+
+2) Use Attributes/CSS Utilities
+
+3) SASS Variables
+
+4) If those three don't work, you have to custom CSS.

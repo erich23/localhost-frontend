@@ -1,0 +1,13 @@
+6/26/18
+
+- Ionic already provides elements that we don't have to create ourselves.
+
+ion-content: actual page
+ion-header: top portion
+
+css vs scss
+- css: add different rules on html
+- scss/sass: (ionic) create more reusable variables, basically more useful
+
+Put page into parent directory (app folder --> app.module.ts)
+In app.module.ts, put page class into directory and entryComponents

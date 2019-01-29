@@ -1,0 +1,23 @@
+7/3/18
+
+/**** Runtime Environment: ****/
+
+Stack: keeps track of active functions
+Heap: allocates memory
+Queue: contains messages and associates callbacks
+    - associated callback forms the initial stack frame
+    - waits till stack is empty to process another messages
+
+Synchronous actions leads to blocking
+    - if a for loop has a really long runtime, then rendering
+      cannot happen until the stack is empty
+
+I/O operations correspond to access/interaction with "external resources"
+*** Synchronous code blocks ***
+
+Asynchronous operations are non-blocking
+    - callback functions specify what runs after (message gets put on queue)
+
+/**** Storing Data ****/
+
+SELECT * FROM ix_fs_2 user; //Reading Data

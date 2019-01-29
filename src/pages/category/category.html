@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{category?.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-list-header>
+      {{category?.name}}
+    </ion-list-header>
+    <ion-item *ngFor="let product of products" (click)="navigateToProduct(product)">
+      <h2>{{product.name}}</h2>
+      <p>{{product.description}}</p>
+      <button ion-button clear item-end color="accent1">View</button>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

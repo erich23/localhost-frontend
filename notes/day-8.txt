@@ -1,0 +1,11 @@
+7/4/18
+
+Schema: database
+Table: set of data elements in form of column/rows
+    - model/entity properties are mapped to table columns
+
+Primary Key: unique identifier
+Not Null: it can't be left out = required
+Unique: no duplicate
+
+

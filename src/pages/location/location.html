@@ -1,0 +1,56 @@
+<!--
+  Generated template for the LocationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{location?.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card type="button" (click)="navigateToProduct(product)" *ngFor="let product of products">
+
+      <ion-card-header>
+        <ion-item style="margin: -10px">
+          <h2>{{product?.name}}</h2>
+        </ion-item>
+      </ion-card-header>
+      <ion-card-content>
+
+        <img height="250px" src="{{product.photo_url}}" alt="product image">
+
+        <h3> Description: </h3>
+        <p>{{product?.description}}</p>
+
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="chatboxes"></ion-icon>
+            <div>Reviews</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="cart"></ion-icon>
+            <div>Buy now</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,46 @@
+<!--
+ Generated template for the ExperiencesPage page.
+
+ See http://ionicframework.com/docs/components/#navigation for more info on
+ Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar style="height: 44px">
+    <ion-title>Your Experiences</ion-title>
+    <button ion-button clear icon-only style="float: right;" (click)="navigateToAddProduct()">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: #f8e9ce">
+
+  <div text-center>
+    <img width=50px height=50px src="../../assets/imgs/localhostlogo.png">
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      What you experienced
+    </ion-list-header>
+    <ion-item *ngFor="let product of boughtProducts">
+      <h2>{{product.name}}</h2>
+      <button ion-button clear item-end color="accent1" (click)="navigateToEditProduct(product)">View details</button>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+
+
+    <ion-list-header>
+      What you host
+    </ion-list-header>
+    <ion-item *ngFor="let product of products">
+      <h2>{{product.name}}</h2>
+      <button ion-button clear item-end color="accent1" (click)="navigateToEditProduct(product)">Edit details</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

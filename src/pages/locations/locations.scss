@@ -1,0 +1,42 @@
+page-locations {
+
+    .card-background-page {
+
+          width: 100%;
+          display: inline-block;
+
+        ion-card {
+          position: relative;
+          text-align: center;
+          margin: 10px;
+          padding: 10px;
+          height: 200px;
+        }
+      
+        .card-title {
+          position: absolute;
+          top: 36%;
+          left: 0%;
+          font-size: 40px;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+          text-shadow: 3px 2px #da5e25;
+        }
+      
+        .card-subtitle {
+          font-size: 17px;
+          position: absolute;
+          left: 0%;
+          top: 60%;
+          width: 100%;
+          
+          color: #fff;
+          font-weight: 700;
+        }
+        .card-img{
+          height: 100%;
+        }
+      
+      }
+}

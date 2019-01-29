@@ -1,0 +1,16 @@
+7/9/18
+
+1) Role mapping model
+
+A user can have many roles (one-to-many):
+- userId: number
+- role: string
+
+2) JWT: JSON Web Token
+
+    1. User sign-in (using id/password, facebook, google, etc.)
+    2. Goes through Authentication Server
+    3. User authenticated, JWT created, and returned to user
+    4. User passes JWT when making API calls
+    5. Info goes to Application Server
+    6. Application verifies and processes API call

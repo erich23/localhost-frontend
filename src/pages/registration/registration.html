@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Register
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #f8e9ce">
+    <div text-center>
+        <img width=50px height=50px src="../../assets/imgs/localhostlogo.png">
+    </div>
+    <p style="font-size: 20px; text-align: center">Welcome to the fun.</p>
+
+    <p *ngIf="this.flag == true" style="font-size: 12px; color: #8e5572">User exists or your passwords don't match. Make sure everything is filled and correct.</p>
+    <ion-list>
+
+
+        <ion-item>
+            <ion-input clearInput='true' [(ngModel)]='firstname' type="text" placeholder="First Name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input clearInput='true' [(ngModel)]='lastname' type="text" placeholder="Last Name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input clearInput='true' [(ngModel)]='email' type="text" placeholder="Email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input clearInput='true' [(ngModel)]='password' type="password" placeholder="Password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input clearInput='true' [(ngModel)]='confirmPassword' type="password" placeholder="Comfirm Password"></ion-input>
+        </ion-item>
+
+        <div >
+            <div class="card">
+
+                <ion-card style="margin: 20px; width: 80%">
+                    <ion-card-header>
+                        <h5 class="card-title"><b>Profile Picture </b></h5>
+                    </ion-card-header>
+
+                    <ion-card-content>
+
+                        <div class="card-body">
+
+
+
+
+
+
+
+                            <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+
+
+
+
+                        </div>
+
+
+                    </ion-card-content>
+
+                </ion-card>
+            </div>
+
+        </div>
+
+
+    </ion-list>
+
+    <div text-center>
+        <button ion-button color="accent1" (click)="register()">Register</button>
+    </div>
+
+</ion-content>

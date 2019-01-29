@@ -1,0 +1,31 @@
+7/5/18
+
+API: A set of rules describing how one application can interact with
+another, and mechanisms which allow how interactions happen
+
+Good API design:
+1) Gather requirements
+    - understand what you're building
+    - understand who it's for
+    - start with a short spec
+2) Write you're API early and often
+    - start before you've implemented the API
+    - start before you have even specified it properly
+    - code lives on as examples, unit tests
+3) Maintain realistic expectations
+    - aim to displease everyone equally
+    - expect to make mistakes
+    - stick to one thing
+
+10 Principles:
+1) Your API sould do one thing, and do it well
+2) Functionality should be easy to explain
+3) Know your audience/domain
+4) If it is hard to name, that's usually a bad sign. Good names drive development
+5) API should be as small as possible, but no smaler. When it doubt, leave it out
+6) Implementation should not impact API. Its details confuse users
+7) Easy to learn. It should be easy to use, even without documentation
+8) Make it hard to misuse
+9) Easy to evolve. Avoid making assumptions of values that might be useful in the future.1
+10) Stay stateless.
+

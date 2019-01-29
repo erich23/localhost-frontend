@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #f8e9ce">
+
+  <div text-center>
+  <img width=50px height=50px src="../../assets/imgs/localhostlogo.png">
+</div>
+  <p style="font-size: 20px; text-align: center">Log in to start exploring.</p>
+  <p *ngIf="this.flag == true" style="font-size: 12px; color: #8e5572">Invalid email or password. Try again or sign up.</p>
+  <ion-list>
+
+    <ion-item>
+      <ion-input clearInput='true' [(ngModel)]="email" type="text" placeholder="Email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input clearInput='true' [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+  <button ion-button color="accent1" (click)="login()">Log In</button>
+  <button ion-button color="dark" clear (click)="navigateToRegistration()">Or Sign Up</button>
+  
+  <!--<p style="text-align: center">Or <a href="#">sign up</a> here.</p>-->
+
+</ion-content>
+
+

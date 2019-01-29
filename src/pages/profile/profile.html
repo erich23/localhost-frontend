@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar style="height: 44px">
+        <ion-title>
+          Your Profile
+        </ion-title>
+        <button ion-button clear icon-only style="float: right;" (click)="navigateToSettings()">
+            <ion-icon name="settings"></ion-icon>
+          </button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #f8e9ce">
+    <p style="font-size: 20px; text-align: center; margin-top: 5px">Welcome to your world.</p>
+
+    <div text-center>
+        <img style="height: 200px" src={{user.photo_url}} alt="profile pic">
+    </div>
+
+    <div text-center>
+        <h1 style="margin-top: 10px">{{user.firstname}} {{user.lastname}}</h1>
+    </div>
+    <div text-center style="margin-top: 40px ">
+        <button ion-button large color="accent1" (click)="navigateToExperiences()">View my experiences</button>
+    </div> 
+    <div text-center style="margin-top: 100px">
+        <button ion-button round color="accent1" (click)="navigateToHistory()">Your Payment History</button>
+        <button ion-button round color="accent1" outline (click)="navigateToHome()">Log out</button>
+    </div> 
+
+  
+</ion-content>

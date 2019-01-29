@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Payment
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div text-center>
+    <h2 style="font-size: 15px; margin-bottom: 0px">Sign up for</h2>
+    <h1 style="font-size: 20px; margin-top: 0px">{{product?.name}}</h1>
+    <p>Price: ${{menu?.price}}</p>
+    {{menu?.date}}, {{menu?.time}}
+  </div>
+
+  <p *ngIf="this.errorMessage" style="color:red"> There was an error with your payment. Please check your information
+    or try
+    again later. </p>
+
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <form #checkout="ngForm" (ngSubmit)="onSubmit(checkout)" class="checkout">
+    <div class="form-row">
+      <label for="card-info">Card Info</label>
+      <div id="card-info" #cardInfo></div>
+
+      <div id="card-errors" role="alert">
+
+
+      </div>
+    </div>
+
+    <button type="submit">Pay ${{menu?.price}}</button>
+  </form>
+
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+
+        <ion-navbar>
+          <ion-title>Reivews for {{product?.name}}</ion-title>
+        </ion-navbar>
+       
+       </ion-header>
+       
+       <ion-content padding style="background-color:#fae9ce">
+       
+          <ion-list>
+            <ion-card *ngFor="let review of reviews">
+              <ion-card-content>
+                <p>{{review.name}}</p>
+                {{review.description}}
+              </ion-card-content>
+       
+              <ion-row>
+                <ion-col>
+                    <ion-icon name="star"></ion-icon>
+                    <div>Rating (supposed to be stars) </div>
+                </ion-col>
+                <ion-col center text-center>
+                  <ion-note>
+                    11h ago
+                  </ion-note>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+          </ion-list>
+       
+       </ion-content>

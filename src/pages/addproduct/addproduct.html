@@ -1,0 +1,119 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add An Experience</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: #f8e9ce">
+
+  <div text-center>
+    <img width=50px height=50px src="../../assets/imgs/localhostlogo.png">
+  </div>
+
+  <p style="font-size: 20px; text-align: center">Share your experience.</p>
+  <p *ngIf="this.flag == true" style="font-size: 12px; color: #8e5572">Make sure everything is filled and correct.</p>
+  <ion-list>
+    <ion-list-header>
+      Product details
+    </ion-list-header>
+    <ion-item>
+      <ion-input autocorrect='on' clearInput='true' [(ngModel)]='name' type="text" placeholder="Experience Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input autocorrect='on' clearInput='true' [(ngModel)]='description' type="text" placeholder="Description of Experience"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input clearInput='true' [(ngModel)]='price' type="number" placeholder="Price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]='category' interface="action-sheet">
+        <ion-option *ngFor="let category of categories" value='{{category.name}}'>{{category.name}}</ion-option>
+        <ion-option value='other'>Other</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="category == 'other'">
+      <ion-label>Other:</ion-label>
+      <ion-input autocorrect='on' [(ngModel)]='categoryOther' type="text" placeholder="Create a new category"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>City</ion-label>
+
+      <ion-select [(ngModel)]='city' interface="action-sheet">
+
+        <ion-option value="Arizona"> Arizona </ion-option>
+        <ion-option value="California"> California </ion-option>
+        <ion-option value="New York"> New York </ion-option>
+        <ion-option value="Paris"> Paris </ion-option>
+
+      </ion-select>
+
+
+    </ion-item>
+
+
+
+  </ion-list>
+
+  <p style="color: red" *ngIf="dateError">There was an error with your dates. Double check if they are valid.</p>
+  <ion-list>
+    <ion-list-header>
+      Add dates and times
+    </ion-list-header>
+    <ion-item *ngFor="let row of rows; let i=index">
+      <ion-input clearInput='true' [(ngModel)]='date[i]' type="date" placeholder='Date'></ion-input>
+      <ion-input clearInput='true' [(ngModel)]='time[i]' type="time" placeholder='Time'></ion-input>
+    </ion-item>
+
+
+    <button style='font-size: 13px' color='accent1' ion-button clear (click)='addrow()'>Add</button>
+    <button style='font-size: 13px' color='dark' ion-button clear (click)='deleterow()'>Delete</button>
+  </ion-list>
+
+  <div>
+    <div class="card">
+
+      <ion-card style="margin: 20px; width: 80%">
+        <ion-card-header>
+          <h5 class="card-title">
+            <b>Image </b>
+          </h5>
+        </ion-card-header>
+
+        <ion-card-content>
+
+          <div class="card-body">
+
+
+            <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+
+
+          </div>
+
+
+        </ion-card-content>
+
+      </ion-card>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div text-center>
+    <button color='accent1' ion-button (click)="addproduct()">Add Experience</button>
+  </div>
+</ion-content>

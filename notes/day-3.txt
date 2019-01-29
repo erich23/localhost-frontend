@@ -1,0 +1,83 @@
+6/27/18
+
+1) How to add new page (easy way):
+
+ionic -help
+ionic generate -help
+ionic generate page <Name>
+ionic generate page <Name> --no-module
+
+2) TS adds extra functionality and type safety ("spelling errors")
+
+3) @NgModule organizes application into various "sections". It is responsible
+   for bootstrapping your code.
+
+   Includes decorators: adds additional metadata
+
+4) Classes and Object Orientation
+
+class Animal {
+      
+      type: string;
+      age: number;
+
+      constructor(type: string) {
+        this.type = type;
+
+	this.age = 1;
+	this.age = 5.6;
+      }
+
+      makeNoise() {
+        console.log("Making noise");
+      }
+}
+
+/* Another class */
+class Dog extends Animal {
+      
+      someAnimal: Animal; //we can specifically name the parent class in the extended class
+
+      constructor() {
+        super("dog") //instantiating the parent class
+      }
+}
+
+var dog = new Animal("dog");
+dog.makeNoise();
+
+var cat = new Animal("cat");
+var doggy = new Dog(); //inheritance, same as var dog = new Animal("dog")
+
+5) Class variables
+
+this = referencing the class itself
+
+6) Access modules
+
+public: variable can be called outside of class
+private: variable cannot be called outside of class
+
+7) Model Binding
+
+html: <input[(ngModel)]="username"/>
+ts: public username: string;
+
+8) Looping
+
+html: <div *ngFor="let item of items">
+      {{item.property}}
+      </div>
+
+ts: public items: Array<item>
+
+9) Conditions
+
+html: <div *ngIf="flag==true">
+      Render this
+      </div>
+
+ts:
+
+10) Dependency Injection
+

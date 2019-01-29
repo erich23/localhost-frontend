@@ -1,0 +1,19 @@
+6/29/18
+
+Backend: Database
+
+1) One to One:
+
+    A store contains a manager's id (foreign key), in which for the manager is
+    the primary key.
+
+2) One to Many:
+
+    A store can contain a location id (foreign key), in which for the location
+    is the primary key. The location can have another stores, which makes it
+    'many'.
+
+3) Many to Many:
+
+    A map can contain a product-store relationship, in which it would have its
+    own id. 
